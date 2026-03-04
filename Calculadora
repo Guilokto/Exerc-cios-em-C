@@ -1,0 +1,68 @@
+1:-) Faça um algoritmo que mostre um menu com as seguintes opções:
+• S – soma;
+• M – média;
+• R – raiz quadrada;
+• P – potência;
+• F – finalizar.
+O algoritmo deve receber a opção desejada, receber os dados necessários para a operação de cada opção, realizar a operação e exibir o resultado. Na opção finalizar, apenas deve-se exibir uma mensagem a respeito.
+
+
+#include<stdio.h>
+#include<locale.h>
+#include<ctype.h>
+#include<math.h>
+main()
+{	
+	
+	char op;
+	int n1,n2,pot;
+	float raiz;
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	printf("=========== MENU ==========");
+	printf("\n\tS - Soma");
+	printf("\n\tM - Média");
+	printf("\n\tR - Raiz Quadrada");
+	printf("\n\tP - Potência");
+	printf("\n\tF - Finalizar");
+	printf("\n\tEntre com a opção desejada: ");
+	scanf(" %c",&op);
+	op=toupper(op);
+	
+	switch(op)
+	{
+		case 'S':printf("\nInsira o primeiro numero: ");
+				 scanf("%d",&n1);
+				 printf("\nInsira o segundo numero: ");
+				 scanf("%d",&n2);
+				 printf("\nO valor da soma é: %d",n1 + n2);
+			break;
+		case 'M':printf("\nInsira o primeiro numero: ");
+				 scanf("%d",&n1);
+				 printf("\nInsira o segundo numero: ");
+				 scanf("%d",&n2);
+				 printf("\nO valor da média é: %.2f",(float)(n1 + n2)/2);
+			break;	
+		case 'R':printf("\nInsira o numero: "); //potencia include<math.h>
+				 scanf("%d",&n1);
+				 raiz = sqrt(n1);
+				 printf("\nA raiz quadrada é: %.2f ",raiz);
+			break;
+		case 'P':printf("\nInsira o primeiro numero: ");
+				 scanf("%d",&n1);
+				 printf("\nInsira o segundo numero: ");
+				 scanf("%d",&n2);
+				 pot=pow(n1,n2);
+				 printf("\nO valor da potencia é: %d",pot);
+			break;
+		case 'F':printf("\nFim.");
+			break;
+		default: printf("\nOpção invalida!");
+		
+	}
+	
+}
+
+
+
