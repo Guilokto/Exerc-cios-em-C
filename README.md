@@ -1,2 +1,2 @@
-# Exerc-cios-em-C
+# C
 Inicio de bimestre, aprendendo C
